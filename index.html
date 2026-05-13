@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumi Restaurant</title>
+    <!-- Подключение современного шрифта -->
+    <link rel="preconnect" href="googleapis.com">
+    <link rel="preconnect" href="gstatic.com" crossorigin>
+    <link href="googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Главный экран -->
+    <header class="hero-section" id="home">
+        
+        <!-- Верхнее навигационное меню -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <ul class="nav-links left-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#reservation">Reservation</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                </ul>
+                
+                <!-- Центральный Логотип -->
+                <div class="brand-logo">
+                    SU<span class="logo-icon">🍳</span>MI
+                </div>
+                
+                <ul class="nav-links right-links">
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#page">Page</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Основной контент (Двухцветный сплит) -->
+        <div class="hero-split-container">
+            
+            <!-- Левая вертикальная полоса (Социальные сети) -->
+            <aside class="sidebar-left">
+                <span class="sidebar-text">FOLLOW US</span>
+                <div class="social-icons">
+                    <a href="#">tw</a>
+                    <a href="#">fb</a>
+                    <a href="#">in</a>
+                    <a href="#">pt</a>
+                </div>
+            </aside>
+
+            <!-- Левая желтая половина -->
+            <div class="split-left-yellow">
+                <div class="badge-text-vertical">
+                    <span class="line-decor">—</span>
+                    <h3>WELLCOME TO</h3>
+                    <p>Sumi is a restaurant, bar and coffee roastery located on a busy corner site in</p>
+                </div>
+                <h1 class="bg-title-left">SUMI</h1>
+            </div>
+
+            <!-- Правая белая половина с тарелкой -->
+            <div class="split-right-white">
+                <h1 class="bg-title-right">RESTAURANT</h1>
+                
+                <!-- Фото-демонстрация блюда -->
+                <div class="food-plate-container">
+                    <img src="salat.jpg" alt="Салат" class="main-plate-img">
+                    <img src="blubery.jpg" alt="Ягода" class="decor-berry berry-1">
+                    <img src="strabery.jpg" alt="Ягода" class="decor-berry berry-2">
+                </div>
+            </div>
+
+            <!-- Правая вертикальная полоса (Кнопка бронирования) -->
+            <aside class="sidebar-right">
+                <a href="#reservation" class="sidebar-text-btn">MAKE A RESERVATION</a>
+            </aside>
+
+        </div>
+    </header>
+
+    <section class="page-block" id="menu">
+        <div class="content-wrapper">
+            <span class="section-tag">Taste Our Best</span>
+            <h2 class="section-heading">Sumi Menu</h2>
+            
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="salat.jpg" alt="Свежий салат">
+                    <div class="menu-details">
+                        <h3>Green Salmon Salad <span>$14.50</span></h3>
+                        <p>Mix greens, fresh salmon, avocado, lemon dressing</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="pizza.jpg" alt="Пицца">
+                    <div class="menu-details">
+                        <h3>Italian Spicy Pizza <span>$18.00</span></h3>
+                        <p>Mozzarella, spicy pepperoni, fresh basil, tomato sauce</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="desert.jpg" alt="Десерт">
+                    <div class="menu-details">
+                        <h3>Berry Cream Cake <span>$8.50</span></h3>
+                        <p>Vanilla biscuit, fresh forest berries, sweet cheese cream</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="ынз.jpg" alt="Суп">
+                    <div class="menu-details">
+                        <h3>Mediterranean Soup <span>$11.20</span></h3>
+                        <p>Traditional seafood broth, shrimps, mussels, garlic toast</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция: БРОНИРОВАНИЕ -->
+    <section class="page-block dark" id="reservation">
+        <div class="content-wrapper">
+            <span class="section-tag">Book A Table</span>
+            <h2 class="section-heading">Make A Reservation</h2>
+            
+            <form class="reservation-form" onsubmit="event.preventDefault(); alert('Table reserved!');">
+                <div class="form-row">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-row">
+                    <input type="date" required>
+                    <input type="time" required>
+                </div>
+                <div class="form-row">
+                    <select required>
+                        <option value="" disabled selected>Number of Guests</option>
+                        <option value="1">1 Person</option>
+                        <option value="2">2 Persons</option>
+                        <option value="3">3 Persons</option>
+                        <option value="4">4+ Persons</option>
+                    </select>
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <button type="submit" class="form-submit-btn">Confirm Reservation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Секция: ИНТЕРНЕТ-МАГАЗИН -->
+    <section class="page-block" id="shop">
+        <div class="content-wrapper">
+            <span class="section-tag">Sumi Goods</span>
+            <h2 class="section-heading">Online Shop</h2>
+            
+            <div class="shop-grid">
+                <div class="product-card">
+                    <img src="cofe.jpg" alt="Кофе">
+                    <h3>Sumi House Blend Coffee</h3>
+                    <span class="price">$19.00</span>
+                    <button class="buy-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="kryjka.avif" alt="Кружка">
+                    <h3>Ceramic Brand Mug</h3>
+                    <span class="price">$12.00</span>
+                    <button class="buy-btn">Add to Cart</butt   n>
+                </div>
+                <div class="product-card">
+                    <img src="fartyk.avif" alt="Фартук">
+                    <h3>Chef Crafted Apron</h3>
+                    <span class="price">$25.00</span>
+                    <button class="buy-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция: БЛОГ -->
+    <section class="page-block dark" id="blog">
+        <div class="content-wrapper">
+            <span class="section-tag">Latest News</span>
+            <h2 class="section-heading">Our Blog</h2>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <img src="unsplash.com" alt="Пост">
+                    <div class="blog-card-content">
+                        <span class="date">May 12, 2026</span>
+                        <h3>Our Secret Ingredient For Perfect Steaks</h3>
+                        <p>Discover how the right balance of dry aging and temperature control changes everything...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="unsplash.com" alt="Пост">
+                    <div class="blog-card-content">
+                        <span class="date">May 08, 2026</span>
+                        <h3>New Summer Coffee Cocktails Menu</h3>
+                        <p>This season we are pushing boundaries with cold brews, citrus syrups and tonic combinations...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция: О НАС -->
+    <section class="page-block" id="about">
+        <div class="content-wrapper">
+            <div class="about-container">
+                <div class="about-text">
+                    <span class="section-tag">Our Story</span>
+                    <h2 class="section-heading">About Us</h2>
+                    <p>Founded with a passion for genuine gastronomy, Sumi Restaurant combines local ingredients with premium global culinary arts. We believe that dining is not just about eating, but an atmospheric journey through tastes and sound.</p>
+                    <p>Every single corner of our roastery and kitchen is crafted to offer you cozy comfort and modern aesthetic joy.</p>
+                </div>
+                <div class="about-image">
+                    <img src="interier.avif" alt="Интерьер">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция: ДОПОЛНИТЕЛЬНАЯ СТРАНИЦА (ОТЗЫВЫ) -->
+    <section class="page-block dark" id="page">
+        <div class="content-wrapper">
+            <span class="section-tag">Guest Reviews</span>
+            <h2 class="section-heading">What People Say</h2>
+            
+            <div class="testimonials-container">
+                <div class="review-item">
+                    <p class="review-text">"The House Blend Coffee is incredibly smooth, and the pizza base is exactly like the ones I had in Naples. Sumi is officially my favorite evening spot."</p>
+                    <h4>— Alexander K.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция: КОНТАКТЫ -->
+    <section class="page-block" id="contact">
+        <div class="content-wrapper">
+            <span class="section-tag">Get In Touch</span>
+            <h2 class="section-heading">Contact Info</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-box">
+                    <h3>📍 Location</h3>
+                    <p>вон там
+
+                    </p>
+                </div>
+                <div class="contact-box">
+                    <h3>📞 Phone & Email</h3>
+                    <p>+67676767<br>sixseven@melstroinoost</p>
+                </div>
+                <div class="contact-box">
+                    <h3>⏰ Opening Hours</h3>
+                    <p>Mon - Thu: 11:00 AM - 10:00 PM<br>Fri - Sun: 67:00 AM - 11:00 PM</p>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
